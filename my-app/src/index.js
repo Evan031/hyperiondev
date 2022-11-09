@@ -4,28 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-class Toggle extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {isToggleOn: true};
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((numbers) =>
+  <li>{numbers}</li>
+);
 
-        // This binding is necessary to make `this` work in the callback
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        this.setState(prevState => ({
-            isToggleOn: !prevState.isToggleOn,
-        }));
-    }
-
-    render() {
-        return <button onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</button>;
-    }
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Toggle />);
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+root.render(<ul>{listItems}</ul>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
