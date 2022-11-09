@@ -4,22 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+class Toggle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: true};
+
+        // This binding is necessary to make `this` work in the callback
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn,
+        }));
+    }
+
+    render() {
+        return <button onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</button>;
+    }
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-function Clock(props) {
-    return (
-        <div>
-            <h1>Hello, world!</h1>
-            <h2>It is {props.date.toLocaleTimeString()}.</h2>
-        </div>
-    );
-}
-
-function tick() {
-    root.render(<Clock date={new Date()} />);
-}
-
-setInterval(tick, 1000);
+root.render(<Toggle />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
