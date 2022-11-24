@@ -1,36 +1,28 @@
 import './Task8.css';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Card from 'react-bootstrap/Card';
 
-const userInfo = [
-    {
-        name: 'Evan',
-        surname: 'Taylor',
-        date_of_birth: '02/06/1992',
-        country: 'South Africa',
-        email: 'e.taylor187031@gmail.com',
-        telephone: '083-377-7473',
-        company: 'Semantica',
-        profile_picture: 'https://www.semantica.co.za/wp-content/uploads/2021/06/Evan-1.png',
-        interests: ['coding', 'fighting', 'drinking', 'hip-hop'],
-    }
-];
-
-function Task8() {
+function Task8(props) {
+    const info = props.info[0];
+    const listItems = info.interests.map(interest => <ListGroup.Item>{interest}</ListGroup.Item>);
     return (
-        <div className="task8">
-            {userInfo.map((data, key) => {
-                return (
-                    <div key={key}>
-                        {data.name +
-                            ' , ' +
-                            data.surname +
-                            ' ,' +
-                            data.date_of_birth +
-                            ', ' +
-                            data.country}
-                    </div>
-                );
-            })}
-        </div>
+        <Card style={{width: '18rem'}}>
+            <Card.Img variant="top" src={info.profile_picture} />
+            <Card.Body>
+                <Card.Title>
+                    {info.name} {info.surname}
+                </Card.Title>
+                <Card.Text>DOB: {info.date_of_birth}</Card.Text>
+                <Card.Text>Country: {info.country}</Card.Text>
+                <Card.Text>Email: {info.email}</Card.Text>
+                <Card.Text>Telephone: {info.telephone}</Card.Text>
+                <Card.Text>Company: {info.company}</Card.Text>
+            </Card.Body>
+            <Card.Body>
+                <Card.Title>Activities</Card.Title>
+            </Card.Body>
+            <ListGroup className="list-group-flush">{listItems}</ListGroup>
+        </Card>
     );
 }
 
