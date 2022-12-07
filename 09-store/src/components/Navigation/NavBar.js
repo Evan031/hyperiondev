@@ -1,29 +1,25 @@
 import React from 'react';
 import './NavBar.css';
 import logo from './logo.jpg';
+import { Link } from 'react-router-dom';
 
 const NavBar = props => {
     return (
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="/">
                 <img src={logo} alt="logo" className="nav_logo" />
-            </a>
+            </Link>
 
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
-                        Link 1
-                    </a>
+                    <Link className="nav-link" to="/shop">
+                        Shop
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
-                        Link 2
-                    </a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">
-                        Link 3
-                    </a>
+                    <Link className="nav-link" to="/profile">
+                        Profile
+                    </Link>
                 </li>
             </ul>
         </nav>
