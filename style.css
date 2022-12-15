@@ -19,9 +19,124 @@ li.wc_payment_method.payment_method_payfast label:after {
     width: 100% !important;
 }
 
+/*=== Bedding CSS ===*/
+#sloom_bedding_column h5 {
+    color: #fff;
+    margin: 0px;
+    background-color: #0f244a !important;
+    text-align: center;
+    text-transform: uppercase !important;
+    padding: 4% 0%;
+    font-size: 22px;
+}
+
+#bedding_five_column h5 {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    height: 50px;
+}
+
+#bedding_five_column p {
+    color: #fff;
+}
+
+#bedding_five_column .wpb_raw_code.wpb_content_element.wpb_raw_html {
+    margin-top: 0px !important;
+}
+
+#bedding_five_column img {
+    width: 80%;
+    text-align: center !important;
+    margin: 0 auto;
+}
+
+#bedding_five_column .uncode-single-media.text-left {
+    height: 143px;
+}
+
+/* 4 column */
+#bedding_four_column h5 {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    height: 50px;
+}
+
+#bedding_four_column p {
+    color: #fff;
+}
+
+#bedding_four_column .wpb_raw_code.wpb_content_element.wpb_raw_html {
+    margin-top: 0px !important;
+}
+
+#bedding_four_column img {
+    width: 60%;
+    text-align: center !important;
+    margin: 0 auto;
+}
+
+#bedding_four_column .uncode-single-media.text-left {
+    height: 143px;
+}
+
+#bedding_four_column .uncode_text_column {
+    margin-top: 10px !important;
+}
+
+ul#list_alignment {
+    margin: 0;
+}
+
+ul.dashed {
+    list-style-type: none;
+}
+
+ul.dashed>li {
+    text-indent: -5px;
+}
+
+ul.dashed>li:before {
+    content: "-";
+    text-indent: -5px;
+    margin-right: 10px;
+}
+
+ul#list_alignment label {
+    display: inline-block;
+    width: 300px !important;
+}
+
+#vanish {
+    display: none
+}
+
+@media screen and (min-width: 768px) {
+    .five-columns.vc_row .vc_col-sm-2 {
+        float: left;
+        width: 18.5%;
+        padding: 0;
+        margin-right: 1.5%;
+        min-height: 0;
+    }
+
+    .five-columns.vc_row .vc_col-sm-2:nth-last-child(2) {
+        margin-right: 0;
+    }
+}
+
+#sloom_bedding_column .wpb_raw_code.wpb_content_element.wpb_raw_html {
+    margin: 0px !important;
+}
+
 #pillow_section .woocommerce-product-details__short-description p:last-child {
     display: none;
 }
+
+
 
 /*NOTES*/
 
@@ -40,7 +155,6 @@ li.wc_payment_method.payment_method_payfast label:after {
         margin-top: unset !important;
     }
 }
-
 @media (max-width: 900px) {
     .vc_row.OVERLAP.style-color-660993-bg.vc_custom_1540549554126.row-container.desktop-hidden {
         margin-top: -37px !important;
@@ -1906,6 +2020,42 @@ img.safariclass2 {
     .mobile5 img#IMAGEMAINHOVER5 {
         width: 114px;
     }
+
+    #bedding_five_column img {
+        width: 19%;
+    }
+
+    #bedding_four_column img {
+        width: 19%;
+    }
+
+    .main-container .row-container .row-parent .column_child.single-internal-gutter .uncont>*:not(:first-child) {
+        margin-top: 3%;
+    }
+
+    #bedding_five_column h5 {
+        margin: 12% 0 0 0;
+    }
+
+    #bedding_five_column p {
+        text-align: center;
+    }
+
+    #bedding_five_column .uncode-single-media.text-left {
+        height: 107px;
+    }
+
+    #bedding_four_column h5 {
+        margin: 12% 0 0 0;
+    }
+
+    #bedding_four_column p {
+        text-align: center;
+    }
+
+    #bedding_four_column .uncode-single-media.text-left {
+        height: 107px;
+    }
 }
 
 @media only screen and (min-width:769px) and (max-width:960px) {
@@ -2532,6 +2682,22 @@ span.tc-label.tm-label {
 
 
 @media only screen and (max-width: 600px) {
+    #bedding_four_column img {
+        width: 20%;
+    }
+
+    #bedding_four_column h5 {
+        margin: 7% 0 0 0;
+    }
+
+    #bedding_five_column img {
+        width: 20%;
+    }
+
+    #bedding_five_column h5 {
+        margin: 7% 0 0 0;
+    }
+
     .howitworksmobile .icon-box-icon {
         width: auto !important;
     }
@@ -2604,6 +2770,16 @@ span.tc-label.tm-label {
 
     body .woocommerce .cart-collaterals {
         margin-left: 0 !important;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    #bedding_five_column img {
+        width: 36%;
+    }
+
+    #bedding_four_column img {
+        width: 36%;
     }
 }
 
