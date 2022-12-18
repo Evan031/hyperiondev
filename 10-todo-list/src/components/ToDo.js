@@ -21,7 +21,10 @@ function ToDo() {
             return;
         }
         addTaskHandler(enteredValue);
+
+        // Clear input and reset state.
         event.target.reset();
+        setEnteredValue('');
     };
 
     const addTaskHandler = enteredText => {
