@@ -21,6 +21,7 @@ function ToDo() {
             return;
         }
         addTaskHandler(enteredValue);
+        event.target.reset();
     };
 
     const addTaskHandler = enteredText => {
