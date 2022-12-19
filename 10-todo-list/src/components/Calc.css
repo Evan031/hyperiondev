@@ -8,6 +8,11 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
   }
+
+  input {
+    overflow: visible;
+    width: -webkit-fill-available;
+}
   
   .calculator {
     padding: 20px;

@@ -4,7 +4,8 @@ import './Calc.css';
 function Calc() {
     return (
         <div className="calculator">
-            <div className="input" id="input"></div>
+            <input />
+            <input />
             <div className="buttons">
                 <div className="operators">
                     <div>+</div>
