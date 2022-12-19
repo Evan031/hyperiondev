@@ -1,8 +1,8 @@
-import ToDo from './components/ToDo';
+import Calc from './components/Calc';
 
 function App() {
   return (
-    <ToDo />
+    <Calc />
   );
 }
 
