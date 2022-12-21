@@ -1,124 +1,66 @@
-body {
-    width: 500px;
-    margin: 4% auto;
-    font-family: 'Source Sans Pro', sans-serif;
-    letter-spacing: 5px;
-    font-size: 1.8rem;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-
-  input {
-    overflow: visible;
-    width: -webkit-fill-available;
+/*Calculator Body*/
+.calc-body {
+  width: 275px;
+  margin: auto;
+  min-height: 400px;
+  box-shadow: 0 8px 50px -7px black;
+  background: #3A4655;
 }
-  
-  .calculator {
-    padding: 20px;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 1px;
-    width: 380px;
-  }
-  
-  .input {
-    border: 1px solid #ddd;
-    border-radius: 1px;
-    height: 60px;
-    padding-right: 15px;
-    padding-top: 10px;
-    text-align: right;
-    margin-right: 6px;
-    font-size: 2.5rem;
-    overflow-x: auto;
-    transition: all .2s ease-in-out;
-  }
-  
-  .input:hover {
-    border: 1px solid #bbb;
-    -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-  }
-  
-  .buttons {}
-  
-  .operators {}
-  
-  .operators div {
-    display: inline-block;
-    border: 1px solid #bbb;
-    border-radius: 1px;
-    width: 80px;
-    text-align: center;
-    padding: 10px;
-    margin: 20px 4px 10px 0;
-    cursor: pointer;
-    background-color: #ddd;
-    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-  }
-  
-  .operators div:hover {
-    background-color: #ddd;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    border-color: #aaa;
-  }
-  
-  .operators div:active {
-    font-weight: bold;
-  }
-  
-  .leftPanel {
-    display: inline-block;
-  }
-  
-  .numbers div {
-    display: inline-block;
-    border: 1px solid #ddd;
-    border-radius: 1px;
-    width: 80px;
-    text-align: center;
-    padding: 10px;
-    margin: 10px 4px 10px 0;
-    cursor: pointer;
-    background-color: #f9f9f9;
-    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-  }
-  
-  .numbers div:hover {
-    background-color: #f1f1f1;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    border-color: #bbb;
-  }
-  
-  .numbers div:active {
-    font-weight: bold;
-  }
-  
-  div.equal {
-    display: inline-block;
-    border: 1px solid #3079ED;
-    border-radius: 1px;
-    width: 23%;
-    text-align: center;
-    padding: 138px 10px;
-    margin: 10px 6px 10px 0;
-    vertical-align: top;
-    cursor: pointer;
-    color: #FFF;
-    background-color: #4d90fe;
-    transition: all .2s ease-in-out;
-  }
-  
-  div.equal:hover {
-    background-color: #307CF9;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    border-color: #1857BB;
-  }
-  
-  div.equal:active {
-    font-weight: bold;
-  }
+
+/*Calculator Display Screen*/
+.calc-screen {
+  padding: 1rem;
+}
+
+#calc-operation {
+  font-size: 1.3rem;
+  text-align: right;
+  color: #727B86;
+  padding-bottom: .5rem;
+}
+
+#calc-typed {
+  font-size: 2rem;
+  text-align: right;
+  color: #fff;
+}
+
+/*Calculator Buttons*/
+.calc-button-row {
+  display: table;
+}
+
+.calc-button-row button {
+  display: table-cell;
+  width: 25%;
+  background: #425062;
+  color: #fff;
+  height: 65px;
+  font-size: 1.3rem;
+  border: none;
+  border-color: #3C4857;
+  border-width: 1px 1px 0px 0;
+  border-style: solid;
+}
+
+.calc-button-row button.ac {
+  color: #ff7665;
+}
+
+.calc-button-row button.opt {
+  color: #ffbc56;
+}
+
+/*The border has been managed in every fourth button so that the design will not distract.*/
+.calc-button-row button:nth-child(4n) {
+  border-right: none;
+}
+
+.calc-button-row button:active {
+  position: relative;
+  top: 1px;
+}
+
+.calc-button-row button:hover {
+  background: #3e4b5c;
+}

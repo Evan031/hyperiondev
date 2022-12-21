@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import './Test.css';
+import { sqrt, evaluate } from 'mathjs'
+
+
 
 function Test() {
 
-    let foo = 2+2;
-
-
+    // let foo = '2+3';
 
     return (
         // <form onSubmit={formSubmitHandler} className="mb-5">
@@ -16,7 +17,7 @@ function Test() {
         //     {/* prettier-ignore */}
         //     <button type="submit" className="btn btn-primary">Submit</button>
         // </form>
-        <p>{foo}</p>
+        <p>{evaluate('1500*30%')}</p>
     );
 }
 
