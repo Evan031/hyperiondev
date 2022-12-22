@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import './Test.css';
-import { sqrt, evaluate } from 'mathjs'
+import { evaluate } from 'mathjs'
 
 
 
 function Test() {
 
     // let foo = '2+3';
+
+    let foo = ['12', '+', '45'];
+    let equation = foo.join('');
 
     return (
         // <form onSubmit={formSubmitHandler} className="mb-5">
