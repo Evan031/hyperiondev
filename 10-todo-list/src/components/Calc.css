@@ -64,3 +64,7 @@
 .calc-button-row button:hover {
   background: #3e4b5c;
 }
+
+button.clear {
+  width: 50%;
+}

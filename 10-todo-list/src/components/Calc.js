@@ -1,72 +1,42 @@
 import React, {useState} from 'react';
-import {evaluate } from 'mathjs'
+import {evaluate} from 'mathjs';
 import './Calc.css';
 
-    
-
 function Calc() {
-    const [number, setNumber] = useState('');
     const [equation, setEquation] = useState([]);
+    const [isValid, setIsValid] = useState(false);
+
 
     const handleClick = event => {
         // setEnteredValue(event.target.value);
         const value = event.target.value;
         switch (value) {
             case 'clear':
-                setNumber('');
                 setEquation([]);
-                break;
-            case '%':
-                console.log('percent');
-                break;
-            case '/':
-                console.log('divide');
-                break;
-            case '*':
-                console.log('multiply');
-                break;
-            case '-':
-                console.log('minus');
-                break;
-            case '+':
-                console.log('plus');
-                setEquation(prev => {
-                    const updatedEquation = [...prev];
-                    updatedEquation.push(number);
-                    updatedEquation.push(value);
-                    return updatedEquation;
-                });
-                setNumber('');
-                break;
-            case '.':
-                console.log('point');
+                setIsValid(false);
                 break;
             case 'del':
-                console.log('del');
-                break;
-            case 'equal':
                 setEquation(prev => {
                     const updatedEquation = [...prev];
-                    updatedEquation.push(number);
-                    updatedEquation.join('');
-                    // const finishedEquation = evaluate(updatedEquation);
-                    console.log(updatedEquation);
+                    updatedEquation.pop();
                     return updatedEquation;
                 });
-                // console.log(equation);
-                setNumber(''); 
+                break;
+            case 'equal':
+                setIsValid(true);
                 break;
             default:
-                // setNumber(value);
-                setNumber(prev => {
-                    const updatedNumber = prev;
-                    const result = updatedNumber.concat(value);
-                    return result;
+                setEquation(prev => {
+                    const updatedEquation = [...prev];
+                    updatedEquation.push(value);
+                    return updatedEquation;
                 });
                 break;
         }
     };
 
+    let stringEquation = equation.join('');
+    
     const Button = props => {
         return (
             <button className={props.selector} value={props.val} onClick={handleClick}>
@@ -75,18 +45,17 @@ function Calc() {
         );
     };
 
-    return (
+    return ( 
         <div className="calc-body">
             <div className="calc-screen">
-                <div id="calc-operation">1234 + 567 + </div>
-                <div id="calc-typed">890</div>
+                <div id="calc-operation">{stringEquation == '' ? '0' : stringEquation}</div>
+                <div id="calc-typed">{isValid ? evaluate(stringEquation) : '0'}</div>
             </div>
 
             <div className="calc-button-row">
                 <Button selector={'clear'} val={'clear'}>
                     C
                 </Button>
-                <button className="opt">H</button>
                 <Button selector={'opt'} val={'%'}>
                     &#37;
                 </Button>
