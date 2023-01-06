@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders the component 1`] = `
+<div>
+  <div
+    class="btn btn-primary"
+    data-testid="button"
+  />
+</div>
+`;
+
+exports[`Button renders without crashing 1`] = `
+<div>
+  <div
+    class="btn btn-primary"
+    data-testid="button"
+  />
+</div>
+`;
