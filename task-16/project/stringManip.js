@@ -1,3 +1,5 @@
-module.exports.formatString = function (str) {
-    return str.trim().toLowerCase();
-};
+function formatString(str) {
+  return str.trim().toLowerCase();
+}
+
+module.exports = {formatString};
