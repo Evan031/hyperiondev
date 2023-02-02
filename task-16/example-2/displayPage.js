@@ -1,6 +1,5 @@
 //This code will respond to a HTTP request on port 8080 by displaying the file 'about.html' on the users browser
 
-
 var http = require('http');
 var fs = require('fs'); //Include the File System Module to allow you to access files
 
